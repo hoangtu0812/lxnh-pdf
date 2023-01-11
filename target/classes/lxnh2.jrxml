@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lxnh" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e0501fd-c280-436f-a5f9-cde8113a8660">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="companyAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[Company Address]]></fieldDescription>
+	</field>
+	<field name="companyName" class="java.lang.String">
+		<fieldDescription><![CDATA[Company Name]]></fieldDescription>
+	</field>
+	<field name="companyPhoneNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[Company Phone Number]]></fieldDescription>
+	</field>
+	<field name="donViNhanHang" class="java.lang.String">
+		<fieldDescription><![CDATA[Đơn vị nhận hàng]]></fieldDescription>
+	</field>
+	<field name="maVatTu" class="java.lang.String">
+		<fieldDescription><![CDATA[Mã Vật Tư]]></fieldDescription>
+	</field>
+	<field name="stt" class="java.lang.String">
+		<fieldDescription><![CDATA[Số thứ tự]]></fieldDescription>
+	</field>
+	<field name="tenVatTu" class="java.lang.String">
+		<fieldDescription><![CDATA[Tên Vật Tư]]></fieldDescription>
+	</field>
+	<field name="dvt" class="java.lang.String">
+		<fieldDescription><![CDATA[Đơn vị tính]]></fieldDescription>
+	</field>
+	<field name="soLuong" class="java.lang.String">
+		<fieldDescription><![CDATA[Số Lượng]]></fieldDescription>
+	</field>
+	<field name="dvtQuyDoi" class="java.lang.String">
+		<fieldDescription><![CDATA[Đơn vị tính quy đổi]]></fieldDescription>
+	</field>
+	<field name="soLo" class="java.lang.String">
+		<fieldDescription><![CDATA[Số lô]]></fieldDescription>
+	</field>
+	<field name="soLuongQuyDoi" class="java.lang.String">
+		<fieldDescription><![CDATA[Số lượng quy đổi]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="121" height="81" uuid="cd156c9d-13a2-4240-9ded-0f5f23995ebc"/>
+				<imageExpression><![CDATA["C:/Users/tu.pham/Downloads/citek-logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="120" y="0" width="70" height="20" uuid="04f0f2b6-c9bd-4169-8e01-3d2b099d24d6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Tên đơn vị:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="20" width="70" height="20" uuid="27db4355-6b1c-450d-a6fe-202d37a5b5b3"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Địa chỉ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="41" width="70" height="20" uuid="6ac3bbe2-5e74-4af4-ac2b-93d7604f9911"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Điện thoại:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="0" width="291" height="21" uuid="60721d51-8883-4eb9-a604-f7f34418038b"/>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="20" width="291" height="21" uuid="9719e0a0-21f8-402b-8eb9-b21595e142fe"/>
+				<textFieldExpression><![CDATA[$F{companyAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="40" width="291" height="21" uuid="f91c453e-5c24-43e7-93bd-c63e1b4dc58c"/>
+				<textFieldExpression><![CDATA[$F{companyPhoneNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="70" width="361" height="31" uuid="ff2d51ab-09fb-4eb4-856f-cc521aaeebd7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LỆNH XUẤT HÀNG]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-1" width="81" height="21" uuid="9941a13a-1ff7-43a6-9aee-7cbd27579e66"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Đơn vị nhận hàng:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="171" height="21" uuid="cb76c75c-c8e2-4a7f-bbee-5c8cacc62d37"/>
+				<textFieldExpression><![CDATA[$F{donViNhanHang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="72" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
