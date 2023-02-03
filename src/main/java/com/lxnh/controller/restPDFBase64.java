@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ import java.util.Map;
 
 @RestController
 public class restPDFBase64 {
-
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping(value = "/pdf")
     public String restPdfBase64(@RequestBody Map<String, Object> JSON) {
         exportPDF exporter = new exportPDF();
@@ -32,6 +33,7 @@ public class restPDFBase64 {
 
         return exporter.lxnhPDF(companyName);
     }
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping(value = "/api-pdf-lxnh")
     public String restPdfBase64(@RequestBody String JsonString) throws JsonProcessingException {
         String companyName;
@@ -120,6 +122,7 @@ public class restPDFBase64 {
         String pdfBase64 = exportPDF.lxnhPDF(parameterModel, detailList);
         return pdfBase64;
     }
+    @CrossOrigin(origins = "http://localhost:8081")
     @PostMapping(value = "/api-pdf-lxnh-json")
     public ResponseEntity<lxnhResponeEntity> restPdfBase64Json(@RequestBody String JsonString) throws JsonProcessingException {
         String companyName;

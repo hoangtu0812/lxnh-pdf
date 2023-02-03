@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+Index
+<button id="btn" onclick="test()">TEST</button>
+
+<script>
+    function test() {
+        var myHeaders = new Headers();
+        myHeaders.append("companyName", "Test");
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "companyName": "Test",
+            "detail": [
+                {
+                    "stt": "1",
+                    "maVatTu": "123",
+                    "tenVatTu": "Sat",
+                    "dvt": "KG",
+                    "soLuong": "1",
+                    "dvtQuyDoi": "KG",
+                    "soLuongQuyDoi": "1",
+                    "soLo": "123"
+                },
+                {
+                    "stt": "2",
+                    "maVatTu": "123",
+                    "tenVatTu": "Sat",
+                    "dvt": "KG",
+                    "soLuong": "1",
+                    "dvtQuyDoi": "KG",
+                    "soLuongQuyDoi": "1",
+                    "soLo": "123"
+                }
+            ]
+        });
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:8080/api-pdf-lxnh-json", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+    }
+</script>
+</body>
+</html>

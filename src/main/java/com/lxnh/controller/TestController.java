@@ -27,7 +27,7 @@ public class TestController {
     @GetMapping(value = "/test")
     public String test() {
         System.out.println("test");
-        return "Test";
+        return "index";
     }
 
     @GetMapping(value = "/api")
